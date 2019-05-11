@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Materii]
 (
-	[id_materie] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[nume_materie] VARCHAR(30)
+	[id] INT NOT NULL PRIMARY KEY,
+	[nume_materie] varchar(30)
 )
