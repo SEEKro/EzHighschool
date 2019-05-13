@@ -14,7 +14,7 @@ namespace WebAppEzHighSchool
     /// Summary description for WebService
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
-    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [WebServiceBinding(ConformsTo = WsiProfiles.None)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
@@ -43,7 +43,7 @@ namespace WebAppEzHighSchool
                 string exception = ex.GetType().ToString();
             }
         }
-       
+
         [WebMethod]
         public string HelloWorld()
         {
@@ -55,7 +55,7 @@ namespace WebAppEzHighSchool
         {
             try
             {
-                Debug.WriteLine("getPassoword with #Functie: " + functie + " #User: "+ user);
+                Debug.WriteLine("getPassoword with #Functie: " + functie + " #User: " + user);
                 SqlCommand getPasswordCommand = new SqlCommand("GetPassword", con);
                 DataSet passwordDataSet = new DataSet();
                 SqlDataAdapter passowrdAdapter;
@@ -66,7 +66,7 @@ namespace WebAppEzHighSchool
                 passowrdAdapter.Fill(passwordDataSet);
                 return passwordDataSet;
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 string exception = ex.GetType().ToString();
             }
@@ -89,7 +89,50 @@ namespace WebAppEzHighSchool
                 passowrdAdapter.Fill(infoDataSet);
                 return infoDataSet;
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
+            return null;
+        }
+
+        [WebMethod]
+        public virtual DataSet getGrades()
+        {
+            try
+            {
+                Debug.WriteLine("getGrades");
+                SqlCommand getAllGradesCommand = new SqlCommand("GetAllGrades", con);
+                DataSet gradesDataSet = new DataSet();
+                SqlDataAdapter gradesAdapter;
+                getAllGradesCommand.CommandType = CommandType.StoredProcedure;
+                gradesAdapter = new SqlDataAdapter(getAllGradesCommand);
+                gradesAdapter.Fill(gradesDataSet);
+                return gradesDataSet;
+            }
+            catch (SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
+            return null;
+        }
+
+        [WebMethod(MessageName = "With parametter")]
+        public virtual DataSet getGrades(string user)
+        {
+            try
+            {
+                Debug.WriteLine("getGrades");
+                SqlCommand getAllGradesCommand = new SqlCommand("GetAllGradesByUser", con);
+                DataSet gradesDataSet = new DataSet();
+                SqlDataAdapter gradesAdapter;
+                getAllGradesCommand.CommandType = CommandType.StoredProcedure;
+                getAllGradesCommand.Parameters.AddWithValue("@username", user);
+                gradesAdapter = new SqlDataAdapter(getAllGradesCommand);
+                gradesAdapter.Fill(gradesDataSet);
+                return gradesDataSet;
+            }
+            catch (SqlException ex)
             {
                 string exception = ex.GetType().ToString();
             }
