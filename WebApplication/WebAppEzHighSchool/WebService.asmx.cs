@@ -55,13 +55,13 @@ namespace WebAppEzHighSchool
         {
             try
             {
-                Debug.WriteLine("Functie: " + functie + " User: "+ user);
+                Debug.WriteLine("getPassoword with #Functie: " + functie + " #User: "+ user);
                 SqlCommand getPasswordCommand = new SqlCommand("GetPassword", con);
-                getPasswordCommand.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter passowrdAdapter;
                 DataSet passwordDataSet = new DataSet();
+                SqlDataAdapter passowrdAdapter;
+                getPasswordCommand.CommandType = CommandType.StoredProcedure;
                 getPasswordCommand.Parameters.AddWithValue("@functie", functie);
-                getPasswordCommand.Parameters.AddWithValue("@user", user);
+                getPasswordCommand.Parameters.AddWithValue("@username", user);
                 passowrdAdapter = new SqlDataAdapter(getPasswordCommand);
                 passowrdAdapter.Fill(passwordDataSet);
                 return passwordDataSet;
@@ -70,7 +70,29 @@ namespace WebAppEzHighSchool
             {
                 string exception = ex.GetType().ToString();
             }
+            return null;
+        }
 
+        [WebMethod]
+        public DataSet getPersonalInfo(string functie, string user)
+        {
+            try
+            {
+                Debug.WriteLine("getPersonalInfo with #Functie: " + functie + " #User: " + user);
+                SqlCommand getInfoCommand = new SqlCommand("GetPersonalInfo", con);
+                DataSet infoDataSet = new DataSet();
+                SqlDataAdapter passowrdAdapter;
+                getInfoCommand.CommandType = CommandType.StoredProcedure;
+                getInfoCommand.Parameters.AddWithValue("@functie", functie);
+                getInfoCommand.Parameters.AddWithValue("@username", user);
+                passowrdAdapter = new SqlDataAdapter(getInfoCommand);
+                passowrdAdapter.Fill(infoDataSet);
+                return infoDataSet;
+            }
+            catch(SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
             return null;
         }
     }
