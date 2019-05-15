@@ -138,5 +138,69 @@ namespace WebAppEzHighSchool
             }
             return null;
         }
+
+        [WebMethod]
+        public DataSet getAbsenteByUser(string user)
+        {
+            try
+            {
+                SqlCommand getAbsenteByUserCommand = new SqlCommand("GetAbesnteByUser", con);
+                DataSet abesenteDataSet = new DataSet();
+                SqlDataAdapter absenteAdapter;
+                getAbsenteByUserCommand.CommandType = CommandType.StoredProcedure;
+                getAbsenteByUserCommand.Parameters.AddWithValue("@username", user);
+                absenteAdapter = new SqlDataAdapter(getAbsenteByUserCommand);
+                absenteAdapter.Fill(abesenteDataSet);
+                return abesenteDataSet;
+            }
+            catch (SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
+
+            return null;
+        }
+
+        [WebMethod]
+        public int insertGrade(string user_profesor, string user_elev, int id_materie, int nota, string data)
+        {
+            try
+            {
+                SqlCommand insertGradeCommand = new SqlCommand("InsertGrade", con);
+                insertGradeCommand.CommandType = CommandType.StoredProcedure;
+                insertGradeCommand.Parameters.AddWithValue("@user_elev", user_elev);
+                insertGradeCommand.Parameters.AddWithValue("@user_profesor", user_profesor);
+                insertGradeCommand.Parameters.AddWithValue("@nota", nota);
+                insertGradeCommand.Parameters.AddWithValue("@data", data);
+                insertGradeCommand.Parameters.AddWithValue("@id_materie", id_materie);
+                return insertGradeCommand.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
+
+            return 0;
+        }
+
+        [WebMethod]
+        public int insertAbsenta(string user_elev, int id_materie, string data)
+        {
+            try
+            {
+                SqlCommand insertAbsenta = new SqlCommand("InsertAbsenta", con);
+                insertAbsenta.CommandType = CommandType.StoredProcedure;
+                insertAbsenta.Parameters.AddWithValue("@user_elev", user_elev);
+                insertAbsenta.Parameters.AddWithValue("@id_materie", id_materie);
+                insertAbsenta.Parameters.AddWithValue("@data", data);
+                return insertAbsenta.ExecuteNonQuery();
+            }
+            catch(SqlException ex)
+            {
+                string exception = ex.GetType().ToString();
+            }
+
+            return 0;
+        }
     }
 }
