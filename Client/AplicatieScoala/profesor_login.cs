@@ -13,6 +13,8 @@ namespace AplicatieScoala
 
     public partial class profesor_login : Form
     {
+        AplicatieScoala.ServiceReference1.WebServiceSoapClient service = new AplicatieScoala.ServiceReference1.WebServiceSoapClient();
+
         Thread t;
         public profesor_login()
         {
@@ -34,7 +36,7 @@ namespace AplicatieScoala
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == "user") && (textBox2.Text == "parola"))
+            if (textBox2.Text == service.getPassword("profesor", textBox1.Text).Tables[0].Rows[0][0].ToString())
             {
                 this.Close();
                 t = new Thread(openprofesor);
@@ -49,7 +51,7 @@ namespace AplicatieScoala
 
         private void openprofesor(object obj)
         {
-            Application.Run(new profesor());
+            Application.Run(new profesor(textBox1.Text));
         }
     }
 }

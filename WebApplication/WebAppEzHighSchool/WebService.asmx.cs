@@ -50,6 +50,7 @@ namespace WebAppEzHighSchool
             return "Hello World";
         }
 
+
         [WebMethod]
         public DataSet getPassword(string functie, string user)
         {

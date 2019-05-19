@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="functie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPasswordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonalInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="functie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonalInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPersonalInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGrades">
+        <s:complexType />
+      </s:element>
+      <s:element name="getGradesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getGradesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="With_x0020_parametter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="With_x0020_parametterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="With_x0020_parametterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAbsenteByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAbsenteByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAbsenteByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertGrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_profesor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_elev" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_materie" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertGradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertGradeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAbsenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_elev" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_materie" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAbsentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertAbsentaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:getPassword" />
+  </wsdl:message>
+  <wsdl:message name="getPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:getPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPersonalInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getPersonalInfo" />
+  </wsdl:message>
+  <wsdl:message name="getPersonalInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getPersonalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGradesSoapIn">
+    <wsdl:part name="parameters" element="tns:getGrades" />
+  </wsdl:message>
+  <wsdl:message name="getGradesSoapOut">
+    <wsdl:part name="parameters" element="tns:getGradesResponse" />
+  </wsdl:message>
+  <wsdl:message name="With_x0020_parametterSoapIn">
+    <wsdl:part name="parameters" element="tns:With_x0020_parametter" />
+  </wsdl:message>
+  <wsdl:message name="With_x0020_parametterSoapOut">
+    <wsdl:part name="parameters" element="tns:With_x0020_parametterResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAbsenteByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getAbsenteByUser" />
+  </wsdl:message>
+  <wsdl:message name="getAbsenteByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getAbsenteByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertGradeSoapIn">
+    <wsdl:part name="parameters" element="tns:insertGrade" />
+  </wsdl:message>
+  <wsdl:message name="insertGradeSoapOut">
+    <wsdl:part name="parameters" element="tns:insertGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAbsentaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAbsenta" />
+  </wsdl:message>
+  <wsdl:message name="insertAbsentaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAbsentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <wsdl:input message="tns:getPasswordSoapIn" />
+      <wsdl:output message="tns:getPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPersonalInfo">
+      <wsdl:input message="tns:getPersonalInfoSoapIn" />
+      <wsdl:output message="tns:getPersonalInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <wsdl:input message="tns:getGradesSoapIn" />
+      <wsdl:output message="tns:getGradesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <wsdl:input name="With_x0020_parametter" message="tns:With_x0020_parametterSoapIn" />
+      <wsdl:output name="With_x0020_parametter" message="tns:With_x0020_parametterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <wsdl:input message="tns:getAbsenteByUserSoapIn" />
+      <wsdl:output message="tns:getAbsenteByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGrade">
+      <wsdl:input message="tns:insertGradeSoapIn" />
+      <wsdl:output message="tns:insertGradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAbsenta">
+      <wsdl:input message="tns:insertAbsentaSoapIn" />
+      <wsdl:output message="tns:insertAbsentaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <soap:operation soapAction="http://tempuri.org/getPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonalInfo">
+      <soap:operation soapAction="http://tempuri.org/getPersonalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <soap:operation soapAction="http://tempuri.org/getGrades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <soap:operation soapAction="http://tempuri.org/With parametter" style="document" />
+      <wsdl:input name="With_x0020_parametter">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="With_x0020_parametter">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <soap:operation soapAction="http://tempuri.org/getAbsenteByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGrade">
+      <soap:operation soapAction="http://tempuri.org/insertGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAbsenta">
+      <soap:operation soapAction="http://tempuri.org/insertAbsenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <soap12:operation soapAction="http://tempuri.org/getPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonalInfo">
+      <soap12:operation soapAction="http://tempuri.org/getPersonalInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <soap12:operation soapAction="http://tempuri.org/getGrades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGrades">
+      <soap12:operation soapAction="http://tempuri.org/With parametter" style="document" />
+      <wsdl:input name="With_x0020_parametter">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="With_x0020_parametter">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <soap12:operation soapAction="http://tempuri.org/getAbsenteByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGrade">
+      <soap12:operation soapAction="http://tempuri.org/insertGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAbsenta">
+      <soap12:operation soapAction="http://tempuri.org/insertAbsenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:59445/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:59445/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

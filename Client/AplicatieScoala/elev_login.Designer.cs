@@ -115,6 +115,7 @@
             this.Controls.Add(this.button1);
             this.Name = "elev_login";
             this.Text = "elev_login";
+            this.Load += new System.EventHandler(this.Elev_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

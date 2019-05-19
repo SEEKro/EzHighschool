@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace AplicatieScoala
 {
+    
     public partial class elev_login : Form
     {
+        AplicatieScoala.ServiceReference1.WebServiceSoapClient service = new AplicatieScoala.ServiceReference1.WebServiceSoapClient();
+
         Thread t;
         public elev_login()
         {
@@ -38,9 +41,10 @@ namespace AplicatieScoala
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            
 
 
-            if ((textBox1.Text == "user") && (textBox2.Text == "parola"))
+            if (textBox2.Text == service.getPassword("elev", textBox1.Text).Tables[0].Rows[0][0].ToString())
             {
                 this.Close();
                 t = new Thread(openelev);
@@ -55,7 +59,12 @@ namespace AplicatieScoala
 
         private void openelev(object obj)
         {
-            Application.Run(new elev());
+            Application.Run(new elev(textBox1.Text));
+        }
+
+        private void Elev_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
