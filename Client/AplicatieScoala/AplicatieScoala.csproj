@@ -88,6 +88,22 @@
     <Compile Include="elev_login.Designer.cs">
       <DependentUpon>elev_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FormProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfesor.Designer.cs">
+      <DependentUpon>FormProfesor.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +141,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfesor.resx">
       <DependentUpon>FormProfesor.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormProfesor.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profesor.resx">
       <DependentUpon>profesor.cs</DependentUpon>
@@ -195,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Analytics-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss-5-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss-2-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
