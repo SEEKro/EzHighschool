@@ -225,5 +225,62 @@
   <ItemGroup>
     <None Include="Resources\Boss-2-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss-5-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Road-Worker-1-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss-2-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss-2-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webalys-Kameleon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Boss-2_379332.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-1-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owl-Book-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owl-Book-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owl-Book-5122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owl-Book-5123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owl-Book-5124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pingu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Analytics-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiza.pmg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiza.pmg1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
