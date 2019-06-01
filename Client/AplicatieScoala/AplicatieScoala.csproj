@@ -84,6 +84,18 @@
     <Compile Include="elev_login.Designer.cs">
       <DependentUpon>elev_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfesor.Designer.cs">
+      <DependentUpon>FormProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="elev_login.resx">
       <DependentUpon>elev_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfesor.resx">
+      <DependentUpon>FormProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profesor.resx">
       <DependentUpon>profesor.cs</DependentUpon>
