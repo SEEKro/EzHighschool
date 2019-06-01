@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace AplicatieScoala
 {
-    public partial class Form1 : Form
+    public partial class MainScreen : Form
     {
         Thread t;
-        public Form1()
+        public MainScreen()
         {
             InitializeComponent();
         }

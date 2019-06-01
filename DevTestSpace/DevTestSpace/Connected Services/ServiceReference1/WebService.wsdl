@@ -154,6 +154,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getAbsenteByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAbsenteByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAbsenteByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="insertGrade">
         <s:complexType>
           <s:sequence>
@@ -312,6 +333,12 @@
   <wsdl:message name="getAbsenteSoapOut">
     <wsdl:part name="parameters" element="tns:getAbsenteResponse" />
   </wsdl:message>
+  <wsdl:message name="getAbsenteByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getAbsenteByUser" />
+  </wsdl:message>
+  <wsdl:message name="getAbsenteByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getAbsenteByUserResponse" />
+  </wsdl:message>
   <wsdl:message name="insertGradeSoapIn">
     <wsdl:part name="parameters" element="tns:insertGrade" />
   </wsdl:message>
@@ -380,6 +407,10 @@
     <wsdl:operation name="getAbsente">
       <wsdl:input message="tns:getAbsenteSoapIn" />
       <wsdl:output message="tns:getAbsenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <wsdl:input message="tns:getAbsenteByUserSoapIn" />
+      <wsdl:output message="tns:getAbsenteByUserSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="insertGrade">
       <wsdl:input message="tns:insertGradeSoapIn" />
@@ -473,6 +504,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAbsente">
       <soap:operation soapAction="http://tempuri.org/getAbsente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <soap:operation soapAction="http://tempuri.org/getAbsenteByUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -602,6 +642,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAbsente">
       <soap12:operation soapAction="http://tempuri.org/getAbsente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAbsenteByUser">
+      <soap12:operation soapAction="http://tempuri.org/getAbsenteByUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicatieScoala
+namespace DevTestSpace
 {
     static class Program
     {
@@ -16,7 +16,8 @@ namespace AplicatieScoala
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainScreen());
+            //Application.Run(new Form1("sergica"));
+            Application.Run(new Form2());
         }
     }
 }
