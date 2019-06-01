@@ -123,6 +123,12 @@
     <EmbeddedResource Include="elev_login.resx">
       <DependentUpon>elev_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfesor.resx">
+      <DependentUpon>FormProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="profesor.resx">
       <DependentUpon>profesor.cs</DependentUpon>
     </EmbeddedResource>
