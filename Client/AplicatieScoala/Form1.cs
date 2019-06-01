@@ -93,5 +93,10 @@ namespace AplicatieScoala
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

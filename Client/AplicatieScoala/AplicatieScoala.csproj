@@ -175,5 +175,11 @@
   <ItemGroup>
     <None Include="Resources\Road-Worker-1-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Analytics-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Analytics-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
