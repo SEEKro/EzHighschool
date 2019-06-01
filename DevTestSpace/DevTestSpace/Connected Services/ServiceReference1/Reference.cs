@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AplicatieScoala.ServiceReference1 {
+namespace DevTestSpace.ServiceReference1 {
     using System.Data;
     
     
@@ -54,18 +54,18 @@ namespace AplicatieScoala.ServiceReference1 {
         // CODEGEN: Generating message contract since the wrapper name (With_x0020_parametter) of message With_x0020_parametter does not match the default value (getGradesByUser)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/With parametter", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        AplicatieScoala.ServiceReference1.Withparametter1 getGradesByUser(AplicatieScoala.ServiceReference1.Withparametter request);
+        DevTestSpace.ServiceReference1.Withparametter1 getGradesByUser(DevTestSpace.ServiceReference1.Withparametter request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/With parametter", ReplyAction="*")]
-        System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametter1> getGradesByUserAsync(AplicatieScoala.ServiceReference1.Withparametter request);
+        System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametter1> getGradesByUserAsync(DevTestSpace.ServiceReference1.Withparametter request);
         
         // CODEGEN: Generating message contract since the wrapper name (With_x0020_parametters) of message With_x0020_parametters does not match the default value (getGradesByUserAndMaaterie)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/With parametters", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        AplicatieScoala.ServiceReference1.Withparametters1 getGradesByUserAndMaaterie(AplicatieScoala.ServiceReference1.Withparametters request);
+        DevTestSpace.ServiceReference1.Withparametters1 getGradesByUserAndMaaterie(DevTestSpace.ServiceReference1.Withparametters request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/With parametters", ReplyAction="*")]
-        System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametters1> getGradesByUserAndMaaterieAsync(AplicatieScoala.ServiceReference1.Withparametters request);
+        System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametters1> getGradesByUserAndMaaterieAsync(DevTestSpace.ServiceReference1.Withparametters request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAbsente", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -73,6 +73,13 @@ namespace AplicatieScoala.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAbsente", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> getAbsenteAsync(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAbsenteByUser", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet getAbsenteByUser(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAbsenteByUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getAbsenteByUserAsync(string user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/insertGrade", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -192,12 +199,12 @@ namespace AplicatieScoala.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WebServiceSoapChannel : AplicatieScoala.ServiceReference1.WebServiceSoap, System.ServiceModel.IClientChannel {
+    public interface WebServiceSoapChannel : DevTestSpace.ServiceReference1.WebServiceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WebServiceSoapClient : System.ServiceModel.ClientBase<AplicatieScoala.ServiceReference1.WebServiceSoap>, AplicatieScoala.ServiceReference1.WebServiceSoap {
+    public partial class WebServiceSoapClient : System.ServiceModel.ClientBase<DevTestSpace.ServiceReference1.WebServiceSoap>, DevTestSpace.ServiceReference1.WebServiceSoap {
         
         public WebServiceSoapClient() {
         }
@@ -259,51 +266,51 @@ namespace AplicatieScoala.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AplicatieScoala.ServiceReference1.Withparametter1 AplicatieScoala.ServiceReference1.WebServiceSoap.getGradesByUser(AplicatieScoala.ServiceReference1.Withparametter request) {
+        DevTestSpace.ServiceReference1.Withparametter1 DevTestSpace.ServiceReference1.WebServiceSoap.getGradesByUser(DevTestSpace.ServiceReference1.Withparametter request) {
             return base.Channel.getGradesByUser(request);
         }
         
         public System.Data.DataSet getGradesByUser(string user) {
-            AplicatieScoala.ServiceReference1.Withparametter inValue = new AplicatieScoala.ServiceReference1.Withparametter();
+            DevTestSpace.ServiceReference1.Withparametter inValue = new DevTestSpace.ServiceReference1.Withparametter();
             inValue.user = user;
-            AplicatieScoala.ServiceReference1.Withparametter1 retVal = ((AplicatieScoala.ServiceReference1.WebServiceSoap)(this)).getGradesByUser(inValue);
+            DevTestSpace.ServiceReference1.Withparametter1 retVal = ((DevTestSpace.ServiceReference1.WebServiceSoap)(this)).getGradesByUser(inValue);
             return retVal.WithparametterResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametter1> AplicatieScoala.ServiceReference1.WebServiceSoap.getGradesByUserAsync(AplicatieScoala.ServiceReference1.Withparametter request) {
+        System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametter1> DevTestSpace.ServiceReference1.WebServiceSoap.getGradesByUserAsync(DevTestSpace.ServiceReference1.Withparametter request) {
             return base.Channel.getGradesByUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametter1> getGradesByUserAsync(string user) {
-            AplicatieScoala.ServiceReference1.Withparametter inValue = new AplicatieScoala.ServiceReference1.Withparametter();
+        public System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametter1> getGradesByUserAsync(string user) {
+            DevTestSpace.ServiceReference1.Withparametter inValue = new DevTestSpace.ServiceReference1.Withparametter();
             inValue.user = user;
-            return ((AplicatieScoala.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAsync(inValue);
+            return ((DevTestSpace.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AplicatieScoala.ServiceReference1.Withparametters1 AplicatieScoala.ServiceReference1.WebServiceSoap.getGradesByUserAndMaaterie(AplicatieScoala.ServiceReference1.Withparametters request) {
+        DevTestSpace.ServiceReference1.Withparametters1 DevTestSpace.ServiceReference1.WebServiceSoap.getGradesByUserAndMaaterie(DevTestSpace.ServiceReference1.Withparametters request) {
             return base.Channel.getGradesByUserAndMaaterie(request);
         }
         
         public System.Data.DataSet getGradesByUserAndMaaterie(string user, string materie) {
-            AplicatieScoala.ServiceReference1.Withparametters inValue = new AplicatieScoala.ServiceReference1.Withparametters();
+            DevTestSpace.ServiceReference1.Withparametters inValue = new DevTestSpace.ServiceReference1.Withparametters();
             inValue.user = user;
             inValue.materie = materie;
-            AplicatieScoala.ServiceReference1.Withparametters1 retVal = ((AplicatieScoala.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAndMaaterie(inValue);
+            DevTestSpace.ServiceReference1.Withparametters1 retVal = ((DevTestSpace.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAndMaaterie(inValue);
             return retVal.WithparamettersResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametters1> AplicatieScoala.ServiceReference1.WebServiceSoap.getGradesByUserAndMaaterieAsync(AplicatieScoala.ServiceReference1.Withparametters request) {
+        System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametters1> DevTestSpace.ServiceReference1.WebServiceSoap.getGradesByUserAndMaaterieAsync(DevTestSpace.ServiceReference1.Withparametters request) {
             return base.Channel.getGradesByUserAndMaaterieAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AplicatieScoala.ServiceReference1.Withparametters1> getGradesByUserAndMaaterieAsync(string user, string materie) {
-            AplicatieScoala.ServiceReference1.Withparametters inValue = new AplicatieScoala.ServiceReference1.Withparametters();
+        public System.Threading.Tasks.Task<DevTestSpace.ServiceReference1.Withparametters1> getGradesByUserAndMaaterieAsync(string user, string materie) {
+            DevTestSpace.ServiceReference1.Withparametters inValue = new DevTestSpace.ServiceReference1.Withparametters();
             inValue.user = user;
             inValue.materie = materie;
-            return ((AplicatieScoala.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAndMaaterieAsync(inValue);
+            return ((DevTestSpace.ServiceReference1.WebServiceSoap)(this)).getGradesByUserAndMaaterieAsync(inValue);
         }
         
         public System.Data.DataSet getAbsente(string user) {
@@ -312,6 +319,14 @@ namespace AplicatieScoala.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> getAbsenteAsync(string user) {
             return base.Channel.getAbsenteAsync(user);
+        }
+        
+        public System.Data.DataSet getAbsenteByUser(string user) {
+            return base.Channel.getAbsenteByUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> getAbsenteByUserAsync(string user) {
+            return base.Channel.getAbsenteByUserAsync(user);
         }
         
         public int insertGrade(string user_profesor, string user_elev, string nume_materie, int nota, string data) {

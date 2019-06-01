@@ -33,7 +33,7 @@ namespace AplicatieScoala
 
         private void openmenu(object obj)
         {
-            Application.Run(new Form1());
+            //Application.Run(new MainScreen());
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace AplicatieScoala
             timer1.Start();
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(dataGridView2);
-            dataGridView2.Rows.Add(service.getAbsenteByUser(user).Tables[0].Rows[0][0].ToString());
+            dataGridView2.Rows.Add(service.getAbsente(user).Tables[0].Rows[0][0].ToString());
         }
 
         private void ListBox3_SelectedIndexChanged(object sender, EventArgs e)

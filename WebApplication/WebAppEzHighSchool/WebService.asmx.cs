@@ -113,6 +113,14 @@ namespace WebAppEzHighSchool
         }
 
         [WebMethod]
+        public DataSet getMaterii()
+        {
+            return makeGetRequest("GetMaterii",
+                                  new List<string>() {},
+                                  new List<Object>() {});
+        }
+
+        [WebMethod]
         public virtual DataSet getGrades()
         {
             return makeGetRequest("GetAllGrades",
@@ -121,19 +129,27 @@ namespace WebAppEzHighSchool
         }
 
         [WebMethod(MessageName = "With parametter")]
-        public virtual DataSet getGrades(string user)
+        public virtual DataSet getGradesByUser(string user)
         {
             return makeGetRequest("GetAllGradesByUser",
                                   new List<string>() { "@username" },
                                   new List<Object>() { user });
         }
 
-        [WebMethod]
-        public DataSet getAbsenteByUser(string user)
+        [WebMethod(MessageName = "With parametters")]
+        public virtual DataSet getGradesByUserAndMaaterie(string user, string materie)
         {
-            return makeGetRequest("GetAbesnteByUser",
-                                  new List<string>() { "@username" },
-                                  new List<Object>() { user });
+            return makeGetRequest("GetAllGradesByUserAndMaterie",
+                                  new List<string>() { "@username", "@materie" },
+                                  new List<Object>() { user, materie });
+        }
+
+        [WebMethod]
+        public DataSet getAbsente(string user)
+        {
+            return makeGetRequest("GetAbsente",
+                                new List<string>() { "@username"},
+                                new List<Object>() { user });
         }
 
         [WebMethod]
@@ -172,8 +188,8 @@ namespace WebAppEzHighSchool
         public DataSet getAbsenteByMaterie(string nume_materie, string user_elev)
         {
             return makeGetRequest("GetAbsenteByMaterie",
-                                  new List<string>() { "@user_elev", "@nume_materie" },
-                                  new List<Object>() { nume_materie, user_elev });
+                                  new List<string>() { "@user", "@materie" },
+                                  new List<Object>() { user_elev, nume_materie });
             }
 
         [WebMethod]
