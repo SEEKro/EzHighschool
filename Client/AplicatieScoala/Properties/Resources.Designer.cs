@@ -83,6 +83,26 @@ namespace AplicatieScoala.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boss_2_icon {
+            get {
+                object obj = ResourceManager.GetObject("Boss-2-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boss_5_icon {
+            get {
+                object obj = ResourceManager.GetObject("Boss-5-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Road_Worker_1_icon {
             get {
                 object obj = ResourceManager.GetObject("Road-Worker-1-icon", resourceCulture);
