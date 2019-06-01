@@ -72,17 +72,17 @@
     <Compile Include="elev.Designer.cs">
       <DependentUpon>elev.cs</DependentUpon>
     </Compile>
+    <Compile Include="EleviInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EleviInfoForm.Designer.cs">
+      <DependentUpon>EleviInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="elev_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="elev_login.Designer.cs">
       <DependentUpon>elev_login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="elev_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="elev_form.designer.cs">
-      <DependentUpon>elev_form.cs</DependentUpon>
     </Compile>
     <Compile Include="profesor.cs">
       <SubType>Form</SubType>
@@ -107,11 +107,11 @@
     <EmbeddedResource Include="elev.resx">
       <DependentUpon>elev.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EleviInfoForm.resx">
+      <DependentUpon>EleviInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="elev_login.resx">
       <DependentUpon>elev_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="elev_form.resx">
-      <DependentUpon>elev_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profesor.resx">
       <DependentUpon>profesor.cs</DependentUpon>

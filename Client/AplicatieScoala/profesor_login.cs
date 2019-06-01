@@ -31,7 +31,7 @@ namespace AplicatieScoala
 
         private void openmenu(object obj)
         {
-            Application.Run(new MainScreen());
+            //Application.Run(new MainScreen());
         }
 
         private void Button1_Click(object sender, EventArgs e)

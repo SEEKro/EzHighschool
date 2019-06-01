@@ -28,7 +28,7 @@ namespace AplicatieScoala
 
         private void openmenu(object obj)
         {
-            Application.Run(new MainScreen());
+            //Application.Run(new MainScreen());
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -10,14 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DevTestSpace
+namespace AplicatieScoala
 {
-    public partial class Form1 : Form
+    public partial class EleviInfoForm : Form
     {
-
-        private DevTestSpace.ServiceReference1.WebServiceSoapClient service;
+        private AplicatieScoala.ServiceReference1.WebServiceSoapClient service;
         private string username;
         private DataSet noteDataSet, absenteDataSet, materiiDataSet;
+
+        public EleviInfoForm(string username, 
+            AplicatieScoala.ServiceReference1.WebServiceSoapClient service)
+        {
+            this.username = username;
+            InitializeComponent();
+            this.service = new AplicatieScoala.ServiceReference1.WebServiceSoapClient();
+            radio_note.Checked = false;
+            radio_absente.Checked = false;
+            populateMateriiListBox();
+            Debug.Write(username);
+        }
+
+        private void EleviInfoForm_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void configureDataGrid(string dataType, DataGridView dgv)
         {
@@ -66,6 +81,7 @@ namespace DevTestSpace
         {
             noteDataSet = service.getGradesByUser(username);
             dataGridView1.DataSource = noteDataSet.Tables[0];
+            Debug.Write(username);
         }
 
         private void populateDataGridWithNote(string materie)
@@ -124,36 +140,33 @@ namespace DevTestSpace
             }
         }
 
-        public Form1(string username)
-        {
-            this.username = username;
-            InitializeComponent();
-            service = new DevTestSpace.ServiceReference1.WebServiceSoapClient();
-            radio_note.Checked = false;
-            radio_absente.Checked = false;
-        }
-
         //Events
-        private void box_materii_SelectedIndexChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            populateEventHandle();
         }
 
-        private void radio_note_CheckedChanged(object sender, EventArgs e)
-        {
-            radio_absente.Checked = false;
-            configureDataGrid("note", dataGridView1);
-            populateEventHandle();
-        }
-
-        private void radio_absente_CheckedChanged_1(object sender, EventArgs e)
+        private void radio_absente_CheckedChanged(object sender, EventArgs e)
         {
             radio_note.Checked = false;
             configureDataGrid("absente", dataGridView1);
             populateEventHandle();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void radio_note_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+            radio_absente.Checked = false;
+            configureDataGrid("note", dataGridView1);
+            populateEventHandle();
+        }
+
+
+        private void box_materii_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            populateEventHandle();
+        }
+
+        private void check_all_CheckedChanged(object sender, EventArgs e)
         {
             if (check_all.Checked)
             {

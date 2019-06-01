@@ -36,7 +36,7 @@ namespace AplicatieScoala
 
         private void openmenu(object obj)
         {
-            Application.Run(new MainScreen());
+            //Application.Run(new MainScreen());
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -46,10 +46,10 @@ namespace AplicatieScoala
 
             if (textBox2.Text == service.getPassword("elev", textBox1.Text).Tables[0].Rows[0][0].ToString())
             {
-                this.Close();
                 t = new Thread(openelev);
                 t.SetApartmentState(ApartmentState.STA);
                 t.Start();
+                this.Close();
             }
             else
             {
@@ -59,7 +59,8 @@ namespace AplicatieScoala
 
         private void openelev(object obj)
         {
-            Application.Run(new elev(textBox1.Text));
+            Application.Run(new EleviInfoForm(textBox1.Text, 
+                                service));
         }
 
         private void Elev_login_Load(object sender, EventArgs e)
