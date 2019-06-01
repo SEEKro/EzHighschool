@@ -19,13 +19,7 @@ namespace AplicatieScoala
         }
 
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            t = new Thread(openelev);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-        }
+        
 
         private void openelev(object obj)
         {
@@ -37,25 +31,27 @@ namespace AplicatieScoala
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            t = new Thread(openadmin);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-        }
+        /* private void Button1_Click(object sender, EventArgs e)
+         {
+             this.Close();
+             t = new Thread(openadmin);
+             t.SetApartmentState(ApartmentState.STA);
+             t.Start();
+         }
+
+           private void Button2_Click(object sender, EventArgs e)
+         {
+             this.Close();
+             t = new Thread(openelev);
+             t.SetApartmentState(ApartmentState.STA);
+             t.Start();
+         }*/
         private void openadmin(object obj)
         {
             Application.Run(new admin_log());
         }
 
-        private void Button3_Click(object sender, EventArgs e)
-        {         
-            this.Close();
-            t = new Thread(openprofesor);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-        }
+        
 
         private void openprofesor(object obj)
         {
@@ -67,6 +63,40 @@ namespace AplicatieScoala
 
         }
 
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            
+                this.Close();
+                t = new Thread(openadmin);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+            
+        }
 
+        private void BunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t = new Thread(openprofesor);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+        }
+
+        private void BunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t = new Thread(openelev);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
