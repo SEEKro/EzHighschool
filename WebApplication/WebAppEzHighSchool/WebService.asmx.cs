@@ -199,5 +199,29 @@ namespace WebAppEzHighSchool
                                   new List<string>() {  },
                                   new List<Object>() {  });
         }
+
+        [WebMethod]
+        public DataSet getClaseById(int id)
+        {
+            return makeGetRequest("GetEleviByClasa",
+                                  new List<string>() { "@id" },
+                                  new List<Object>() { id });
+        }
+
+        [WebMethod]
+        public int insertElev(string nume, string data_nasterii, string user_elev, string password, int id_clasa)
+        {
+            return makePostRequest("InsertElev",
+                                     new List<string>() { "@username", "@password", "@data_nasterii", "@id_clasa", "@nume" },
+                                     new List<Object>() { user_elev, password, data_nasterii, id_clasa, nume });
+        }
+
+        [WebMethod]
+        public int insertProfesor(string nume, string user_profesor, string password)
+        {
+            return makePostRequest("InsertProfesor",
+                                     new List<string>() { "@username", "@password", "@nume" },
+                                     new List<Object>() { user_profesor, password, nume });
+        }
     }
 }

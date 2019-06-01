@@ -51,7 +51,7 @@ namespace AplicatieScoala
 
         private void openprofesor(object obj)
         {
-            Application.Run(new profesor(textBox1.Text));
+            Application.Run(new FormProfesori(service, textBox1.Text));
         }
     }
 }
