@@ -16,7 +16,7 @@ namespace AplicatieScoala
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new elev_login());
+            Application.Run(new profesor_login());
         }
     }
 }

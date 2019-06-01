@@ -88,6 +88,12 @@
     <Compile Include="elev_login.Designer.cs">
       <DependentUpon>elev_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProfesori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfesori.Designer.cs">
+      <DependentUpon>FormProfesori.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +129,8 @@
     <EmbeddedResource Include="elev_login.resx">
       <DependentUpon>elev_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProfesor.resx">
-      <DependentUpon>FormProfesor.cs</DependentUpon>
+    <EmbeddedResource Include="FormProfesori.resx">
+      <DependentUpon>FormProfesori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profesor.resx">
       <DependentUpon>profesor.cs</DependentUpon>
